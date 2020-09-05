@@ -1,15 +1,13 @@
 #Método
 def clear_steps(arr)
-    new_arr = []
-    arr.each do |ele|
-        ele = ele.to_i
-        if ele.class == Integer
-            new_arr.push(ele)
+    output = []
+    arr.each do |x|
+        if x.match('\D').nil? && (x.to_i > 200 && x.to_i < 100000) #Esto es regex.s
+            output.push(x.to_i)
         end
     end
-    return new_arr
+    return output
 end
-
 #Arreglo de prueba
 pasos = ['100', '21', '231as', '2031', '1052000', '213b', 'b123']
 
